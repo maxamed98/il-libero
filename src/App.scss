@@ -1,0 +1,1375 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body{
+  background:#333;
+}
+
+
+.header{
+  color:rgb(228, 225, 225);
+  text-shadow: 0 0 3px rgba(0,0,0,0.8);
+  background:#8B8787;
+  height:8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Cormorant Garamond', serif;
+
+  h1{
+    cursor: pointer;
+  }
+
+  h1:hover{
+    color:#D40000;
+    text-shadow: 1px 2px 3px rgba(0,0,0,0.6);
+  }
+}
+
+.footer{
+  // position:absolute;
+  // bottom:0;
+  // width:100vw;
+  color:rgb(228, 225, 225);
+  text-shadow: 0 0 3px rgba(0,0,0,0.8);
+  background:#8B8787;
+  height:12vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.nav{
+
+  h1{
+    margin:1rem;
+  }
+
+  color:rgb(228, 225, 225);
+  text-shadow: 0 0 3px rgba(0,0,0,0.8);
+  // background:#8B8787;
+  // height:12vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Cormorant Garamond', serif;
+  padding:40px;
+
+  form{
+    position:relative;
+    width:26rem;
+    // height:4rem;
+    // background:Red;
+    
+    input{
+      padding: 1rem 2rem;
+      border-radius:2rem;
+      // width:26rem;
+      width:90%;
+      // height:100%;
+      outline:none;
+      font-size:1rem;
+      margin:1rem;
+      // position:absolute;
+      // top:0;
+      // left:0;
+    }
+    
+    i{
+      position:absolute;
+      right:10%;
+      top:40%;
+      // color:red;
+      color:black;
+      font-size:1.4rem;
+      cursor: pointer;
+    }
+
+  }
+    
+
+  h2{
+    margin-bottom: 0.3em;
+  }
+
+  p{
+    margin-bottom:2rem;
+    font-size:2rem;
+  }
+
+//   button{
+//     padding: 1rem 2rem;
+//     margin: 0 0.4rem;
+//     border-radius:2rem;
+//     outline:none;
+//     border:none;
+//     font-family: monospace;
+//     font-size: 1rem;
+//     cursor:pointer;
+//   }
+
+//   button:hover{
+//     background:#B1B0B0;
+//     color:rgb(227, 220, 220);
+//     box-shadow: 0 3px 2px 1px rgba(0,0,0,0.4);
+//     text-shadow: 0 2px 3px rgba(0,0,0,0.8)
+//   }
+}
+
+.movieCont{
+  width:85%;
+  margin:auto;
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  text-align: center;
+
+  .movieCard{
+    margin:1rem;
+    cursor:pointer;
+    img{
+      box-shadow: 1px 3px 5px 3px rgba(0,0,0,0.4);
+      width:10rem;
+
+    }
+  }
+
+  .movieCard:hover{
+    transform: scale(1.3);
+    // box-shadow: 1px 2px 3px 1px rgba(0,0,0,0.4);
+  }
+}
+
+.moviesFrame{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin:2rem;
+  overflow: hidden;
+  iframe{
+    width:500px;
+    overflow: hidden;
+    
+  }
+
+  .servers{
+    display: flex;
+    gap:1.5rem;
+    margin-top:0.4rem;
+    margin-bottom:1.7rem;
+    color:white;
+    
+    h2{
+      border: 1px solid black;
+      padding:0.6rem;
+      cursor: pointer;
+    }
+
+    h2.active{
+      background:green;
+    }
+  }
+}
+
+.num-of-series-cont{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color:white;
+
+  h1{
+    margin:3rem;
+    font-size:3rem;
+  }
+
+  .szns-grid{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    margin-bottom: 2rem;
+
+    .szn-card{
+      padding:1.5rem;
+      border:1px solid #fff;
+      margin:1rem;
+      text-shadow:1px 4px 3px rgba(0,0,0,0.8);
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .szn-card:hover{
+      transform: scale(1.4);
+      box-shadow: 2px 1px 3px 1px rgba(255,255,255,0.9);
+      text-shadow:1px 4px 3px rgba(255,255,255,0.9);
+      background:#fff;
+      color:black;
+    }
+  }
+
+}
+
+.full-eps-cont{
+
+  #ep-count-title{
+    text-align: center;
+    color:white;
+    font-size:3rem;
+    margin:2rem;
+  }
+
+  .episode-cont{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    margin: 2rem;
+    text-align: center;
+    
+    .ep-num-card{
+      color:white;
+      padding:1.5rem;
+      border:1px solid #fff;
+      margin:1rem;
+      text-shadow:1px 4px 3px rgba(0,0,0,0.8);
+
+      cursor: pointer;
+    }
+    
+    .ep-num-card:hover{
+      transform: scale(1.4);
+      box-shadow: 2px 1px 3px 1px rgba(255,255,255,0.9);
+      text-shadow:1px 4px 3px rgba(255,255,255,0.9);
+      background:#fff;
+      color:black;
+    }
+    
+    #noEpsAvailable{
+      text-align: center;
+      color:red;
+      position:relative;
+      left:43%;
+      top:50%;
+      // transform: translate(-50%,-50%);
+      height: 50vh;
+      width:50vw;
+    }
+  }
+}
+  
+.watch-series-cont{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color:white;
+  margin:2.2rem;
+
+
+  h2{
+    font-size:3rem;
+    margin:1rem;
+  }
+
+  .servers{
+    display: flex;
+    gap:1.5rem;
+    margin-bottom:1.7rem;
+    color:white;
+    
+    h2{
+      border: 1px solid black;
+      padding:0.6rem;
+      cursor: pointer;
+      font-size:1.5rem;
+     margin:0rem;
+    }
+
+    h2.active{
+      background:green;
+    }
+  }
+
+  // .serversCont{
+  //   display: flex;
+    
+  //   h4{
+  //     margin:1rem;
+  //     border: 1px solid #fff;
+  //     padding:0.5rem;
+  //     cursor: pointer;
+  //   }
+    
+  //   h4:hover{
+  //     background:#fff;
+  //     color:black;
+  //   }
+  // }
+
+
+  iframe{
+    width:500px;
+    height:400px;
+  }
+}
+
+.page-not-found-cont{
+  color:rgb(89, 89, 211);
+  text-shadow: 1px 1px 2px rgba(0,0,0,1);
+  margin:13rem auto;
+  display: flex;
+  gap:1rem;
+  align-items: center;
+  justify-content: center;
+  width:4rem;
+  
+  .for-o-for{
+    font-size:3rem;
+    padding-right:1rem;
+    // color:blue;
+    // text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+  }
+
+  .border{
+    font-size:4rem;
+  }
+
+  h2{
+    text-align: center;
+  }
+
+}
+
+
+
+@media screen and (min-width: 200px){
+  .moviesFrame{
+    // margin:2rem;
+    // width:75vw;
+    iframe{
+      width: 185px;
+      height: 180px;
+    }
+  }
+
+  .watch-series-cont{
+    h2{
+      font-size:1.3rem;
+    }
+    iframe{
+      width:180px;
+      height:165px;
+
+    }
+  }
+
+  .movieCont{
+    grid-template-columns: repeat(1,1fr);
+    width:100%;
+    gap:0.8rem;
+    
+    .movieCard{
+      margin:0;
+      // margin-right:0.2rem;
+      // padding:0.3rem;
+      img{
+        width:8rem;
+      }
+    }
+  }
+
+  .full-eps-cont{
+    // #ep-count-title{
+    //   // color:Red;
+    // }
+    .episode-cont{
+      grid-template-columns: repeat(1,1fr);
+      margin:0;
+    }
+  }
+
+  .num-of-series-cont{
+    h1{
+      text-align: center;
+    }
+
+    .szns-grid{
+      grid-template-columns: repeat(1,1fr);
+    }
+  }
+
+  .nav{
+    form{
+      width:12rem;
+    }
+    h1{
+      font-size:1rem;
+    }
+    h2{
+      font-size:0.9rem;
+      text-align:center;
+    }
+    p{
+      font-size:1.2rem;
+    }
+  }
+}
+@media screen and (min-width: 250px){
+  .moviesFrame{
+    // margin:2rem;
+    // width:70vw;
+    iframe{
+      width: 220px;
+      height: 205px;
+    }
+
+    .movieCont{
+      grid-template-columns: repeat(1,1fr);
+      width:100%;
+      gap:0.8rem;
+      
+      .movieCard{
+        margin:0;
+        // margin-right:0.2rem;
+        // padding:0.3rem;
+        img{
+          width:8rem;
+        }
+      }
+    }
+  }
+
+
+  .movieCont{
+    grid-template-columns: repeat(1,1fr);
+    width:100%;
+    gap:0.8rem;
+    margin-top:1.5rem;
+    
+    .movieCard{
+      margin:0;
+      // margin-right:0.2rem;
+      // padding:0.3rem;
+      img{
+        width:8rem;
+      }
+    }
+  }
+
+  .nav{
+    form{
+      width:17rem;
+    }
+    h1{
+      font-size:1rem;
+    }
+    h2{
+      font-size:1rem;
+    }
+    p{
+      font-size:1.2rem;
+    }
+  }
+
+  .watch-series-cont{
+    h2{
+      font-size:1.2rem;
+    }
+    iframe{
+      width:230px;
+      height:210px;
+
+    }
+  }
+}
+
+@media screen and (min-width:280px){
+  .full-eps-cont{
+
+    .episode-cont{
+      grid-template-columns: repeat(2,1fr);
+    }
+  }
+
+  .watch-series-cont{
+    h2{
+      font-size:1.3rem;
+    }
+    iframe{
+      width:260px;
+      height:240px;
+
+    }
+  }
+
+  .num-of-series-cont{
+    .szns-grid{
+      grid-template-columns: repeat(2,1fr);
+
+    }
+  }
+
+  .nav{
+    form{
+      width:19rem;
+    }
+    h1{
+      font-size:1.1rem;
+    }
+    h2{
+      font-size:1.3rem;
+    }
+    p{
+      font-size:1.3rem;
+    }
+  }
+
+  .movieCont{
+    grid-template-columns: repeat(1,1fr);
+    width:100%;
+    gap:0.8rem;
+    
+    .movieCard{
+      margin:0;
+      // margin-right:0.2rem;
+      // padding:0.3rem;
+      img{
+        width:11rem;
+      }
+    }
+  }
+
+  
+
+  .moviesFrame{
+    // margin:2rem;
+    iframe{
+      width:260px;
+      height:240px
+      
+    }
+  }
+}
+
+@media screen and (min-width:350px){
+  .full-eps-cont{
+
+    .episode-cont{
+      grid-template-columns: repeat(2,1fr);
+    }
+  }
+
+  .watch-series-cont{
+    h2{
+      font-size:1.8rem;
+    }
+    iframe{
+      width:320px;
+      height:240px;
+
+    }
+  }
+
+  .num-of-series-cont{
+    .szns-grid{
+      grid-template-columns: repeat(2,1fr);
+
+    }
+  }
+
+  .nav{
+    form{
+      width:22rem;
+    }
+    h1{
+      font-size:1.13rem;
+    }
+    h2{
+      font-size:1.3rem;
+    }
+    p{
+      font-size:1.3rem;
+    }
+  }
+
+  .movieCont{
+    grid-template-columns: repeat(2,1fr);
+    width:100%;
+    gap:0.8rem;
+    
+    .movieCard{
+      margin:0;
+      // margin-right:0.2rem;
+      // padding:0.3rem;
+      img{
+        width:8rem;
+      }
+    }
+  }
+
+  .moviesFrame{
+    // margin:2rem;
+    iframe{
+      width:310px;
+      height:290px
+      
+    }
+  }
+}
+
+@media screen and (min-width:390px){
+  .full-eps-cont{
+
+    .episode-cont{
+      grid-template-columns: repeat(2,1fr);
+    }
+  }
+
+  .watch-series-cont{
+    h2{
+      font-size:1.8rem;
+    }
+    iframe{
+      width:350px;
+      height:270px;
+
+    }
+  }
+
+  .num-of-series-cont{
+    .szns-grid{
+      grid-template-columns: repeat(2,1fr);
+
+    }
+  }
+
+  .nav{
+    form{
+      width:22rem;
+    }
+    h1{
+      font-size:1.25rem;
+    }
+    h2{
+      font-size:1.3rem;
+    }
+    p{
+      font-size:1.3rem;
+    }
+  }
+
+  .movieCont{
+    grid-template-columns: repeat(2,1fr);
+    width:100%;
+    gap:0.8rem;
+    
+    .movieCard{
+      margin:0;
+      // margin-right:0.2rem;
+      // padding:0.3rem;
+      img{
+        width:8rem;
+      }
+    }
+  }
+
+  .moviesFrame{
+    // margin:2rem;
+    iframe{
+      width:375px;
+      height: 350px;
+      
+    }
+  }
+
+  
+}
+
+@media screen and (min-width:450px){
+  .nav{
+    form{
+      width:22rem;
+    }
+    h1{
+      font-size:1.5rem;
+    }
+    h2{
+      font-size:1.3rem;
+    }
+    p{
+      font-size:1.3rem;
+    }
+  }
+
+  .full-eps-cont{
+    // #ep-count-title{
+    //   color:Red;
+    // }
+    .episode-cont{
+      grid-template-columns: repeat(3,1fr);
+      margin:0;
+    }
+  }
+
+
+
+  .movieCont{
+    width:100%;
+    gap:0.8rem;
+    
+    .movieCard{
+      margin:0;
+      // margin-right:0.2rem;
+      // padding:0.3rem;
+      img{
+        width:10rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width:480px){
+  .nav{
+    form{
+      width:22rem;
+    }
+    h1{
+      font-size:1.6rem;
+    }
+    h2{
+      font-size:1.3rem;
+    }
+    p{
+      font-size:1.3rem;
+    }
+  }
+
+  .full-eps-cont{
+    // #ep-count-title{
+    //   color:Red;
+    // }
+    .episode-cont{
+      grid-template-columns: repeat(3,1fr);
+      margin:0;
+    }
+  }
+
+  .num-of-series-cont{
+    .szns-grid{
+      grid-template-columns: repeat(3,1fr);
+      margin: 1rem;
+    }
+  }
+
+  .movieCont{
+    width:100%;
+    gap:0.8rem;
+    
+    .movieCard{
+      margin:0;
+      // margin-right:0.2rem;
+      // padding:0.3rem;
+      img{
+        width:10rem;
+      }
+    }
+  }
+
+}
+
+@media screen and (min-width: 520px){
+  .nav{
+    form{
+      width:22rem;
+    }
+    h1{
+      font-size:1.6rem;
+    }
+    h2{
+      font-size:1.3rem;
+    }
+    p{
+      font-size:1.3rem;
+    }
+  }
+  
+  .moviesFrame{
+    // margin:2rem;
+    // width:70vw;
+    iframe{
+      width: 480px;
+      // width: 495px;
+      height: 455px;
+    }
+  }
+
+  .watch-series-cont{
+    h2{
+      font-size:1.8rem;
+    }
+    iframe{
+      width:485px;
+      // height:440px;
+
+    }
+  }
+
+  .movieCont{
+    grid-template-columns: repeat(3,1fr);
+    width:100%;
+    gap:0.8rem;
+    margin-top:1.5rem;
+    
+    .movieCard{
+      margin:0;
+      // margin-right:0.2rem;
+      // padding:0.3rem;
+      img{
+        width:9rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 550px){
+  .moviesFrame{
+    // margin:2rem;
+    // width:70vw;
+    // width:80vw;
+    iframe{
+      width: 515px;
+      // height: 450px;
+
+      
+    }
+  }
+
+  .nav{
+    form{
+      width:22rem;
+    }
+    h1{
+      font-size:1.9rem;
+    }
+    h2{
+      font-size:1.3rem;
+    }
+    p{
+      font-size:1.3rem;
+    }
+  }
+
+  .movieCont{
+    width:100%;
+    gap:0.8rem;
+    
+    .movieCard{
+      margin:0;
+      // margin-right:0.2rem;
+      // padding:0.3rem;
+      img{
+        width:9rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width:600px){
+  .movieCont{
+    grid-template-columns: repeat(3,1fr);
+    // width:100%;
+    // gap:0.8rem;
+      
+    .movieCard{
+      margin:0;
+      // margin-right:0.2rem;
+      // padding:0.3rem;
+      img{
+        width:10rem;
+      }
+    }
+    
+  }
+  .moviesFrame{
+    iframe{
+      width:565px;
+    }
+  }
+  .watch-series-cont{
+    h2{
+      font-size:2rem;
+    }
+
+    iframe{
+      width:565px;
+      height: 490px;
+    }
+  }
+
+  .num-of-series-cont{
+    .szns-grid{
+      grid-template-columns: repeat(3,1fr);
+
+    }
+  }
+
+  .nav{
+    form{
+      width:22rem;
+    }
+    h1{
+      font-size:2rem;
+    }
+    h2{
+      font-size:1.3rem;
+    }
+    p{
+      font-size:1.3rem;
+    }
+  }
+
+  .full-eps-cont{
+    // #ep-count-title{
+    //   color:Red;
+    // }
+    .episode-cont{
+      grid-template-columns: repeat(3,1fr);
+      margin:1rem;
+    }
+  }
+}
+
+@media screen and (min-width:660px){
+  .movieCont{
+    grid-template-columns: repeat(3,1fr);
+
+      width:100%;
+      gap:0.8rem;
+      
+      .movieCard{
+        margin:0;
+        // margin-right:0.2rem;
+        // padding:0.3rem;
+        img{
+          width:10rem;
+        }
+      }
+  }
+  .moviesFrame{
+    iframe{
+      width:580px;
+    }
+  }
+  .watch-series-cont{
+    iframe{
+      width:580px;
+      height: 500px;
+    }
+  }
+
+  .num-of-series-cont{
+    .szns-grid{
+      grid-template-columns: repeat(4,1fr);
+
+    }
+  }
+
+  .full-eps-cont{
+    // #ep-count-title{
+    //   color:Red;
+    // }
+    .episode-cont{
+      grid-template-columns: repeat(4,1fr);
+      margin:1rem;
+    }
+  }
+}
+
+@media screen and (min-width:750px){
+  .movieCont{
+    grid-template-columns: repeat(4,1fr);
+    width:100%;
+    gap:0.8rem;
+      
+      .movieCard{
+        margin:0;
+        // margin-right:0.2rem;
+        // padding:0.3rem;
+        img{
+          width:10rem;
+        }
+      }
+  }
+  .moviesFrame{
+    iframe{
+      width:700px;
+    }
+  }
+  .watch-series-cont{
+    h2{
+      font-size:2.5rem;
+    }
+
+    iframe{
+      width:700px;
+    }
+  }
+
+  .num-of-series-cont{
+    .szns-grid{
+      grid-template-columns: repeat(4,1fr);
+
+    }
+  }
+}
+
+@media screen and (min-width:800px){
+  .num-of-series-cont{
+    .szns-grid{
+      grid-template-columns: repeat(5,1fr);
+
+    }
+  }
+}
+
+@media screen and (min-width:820px){
+  .movieCont{
+    grid-template-columns: repeat(4,1fr);
+
+      width:100%;
+      gap:0.8rem;
+      
+      .movieCard{
+        margin:0;
+        // margin-right:0.2rem;
+        // padding:0.3rem;
+        img{
+          width:11rem;
+        }
+      }
+  }
+  .moviesFrame{
+    iframe{
+      width:850px;
+      height:500px;
+    }
+  }
+  .watch-series-cont{
+    iframe{
+      width:790px;
+      height:500px;
+    }
+  }
+}
+
+@media screen and (min-width:860px){
+  .movieCont{
+    grid-template-columns: repeat(4,1fr);
+
+      width:100%;
+      gap:0.8rem;
+      
+      .movieCard{
+        margin:0;
+        // margin-right:0.2rem;
+        // padding:0.3rem;
+        img{
+          width:11rem;
+        }
+      }
+  }
+  .moviesFrame{
+    iframe{
+      width:850px;
+      height:500px;
+    }
+  }
+  .watch-series-cont{
+    iframe{
+      width:790px;
+      height:500px;
+    }
+  }
+}
+@media screen and (min-width:900px){
+  .movieCont{
+    grid-template-columns: repeat(5,1fr);
+
+      width:100%;
+      gap:0.8rem;
+      
+      .movieCard{
+        margin:0;
+        // margin-right:0.2rem;
+        // padding:0.3rem;
+        img{
+          width:10rem;
+        }
+      }
+  }
+  .moviesFrame{
+    iframe{
+      width:850px;
+      height:500px;
+    }
+  }
+  .watch-series-cont{
+    iframe{
+      width:850px;
+    }
+  }
+
+  .full-eps-cont{
+
+    .episode-cont{
+      grid-template-columns: repeat(5,1fr);
+    }
+  }
+
+  
+}
+
+@media screen and (min-width:1005px){
+  .num-of-series-cont{
+    .szns-grid{
+      grid-template-columns: repeat(5,1fr);
+
+    }
+  }
+}
+
+
+
+@media screen and (min-width:1120px){
+  .movieCont{
+    grid-template-columns: repeat(5,1fr);
+
+      width:100%;
+      gap:0.8rem;
+      
+      .movieCard{
+        margin:0;
+        // margin-right:0.2rem;
+        // padding:0.3rem;
+        img{
+          width:10rem;
+        }
+      }
+  }
+  .moviesFrame{
+    iframe{
+      width:950px;
+      height:630px;
+    }
+  }
+  .watch-series-cont{
+    iframe{
+      width:950px;
+      height:630px;
+
+    }
+  }
+  .full-eps-cont{
+
+    .episode-cont{
+      grid-template-columns: repeat(6,1fr);
+    }
+  }
+
+  .num-of-series-cont{
+    .szns-grid{
+      grid-template-columns: repeat(7,1fr);
+
+    }
+  }
+}
+
+@media screen and (min-width:1180px){
+  .movieCont{
+    grid-template-columns: repeat(5,1fr);
+
+      width:100%;
+      gap:0.8rem;
+      
+      .movieCard{
+        margin:0;
+        // margin-right:0.2rem;
+        // padding:0.3rem;
+        img{
+          width:13rem;
+        }
+      }
+  }
+}
+
+@media screen and (min-width:1320px){
+  .movieCont{
+    grid-template-columns: repeat(5,1fr);
+
+      width:100%;
+      gap:0.8rem;
+      
+      .movieCard{
+        margin:0;
+        // margin-right:0.2rem;
+        // padding:0.3rem;
+        img{
+          width:15rem;
+        }
+      }
+  }
+  .moviesFrame{
+    iframe{
+      width:1150px;
+      height:680px;
+    }
+  }
+  .watch-series-cont{
+
+    h2{
+      font-size: 3rem;
+    }
+
+    iframe{
+      width:1150px;
+      height:680px;
+
+    }
+  }
+  .full-eps-cont{
+    #ep-count-title{
+      font-size:3.5rem;
+    }
+    .episode-cont{
+      grid-template-columns: repeat(7,1fr);
+    }
+  }
+
+  .num-of-series-cont{
+    h1{
+      font-size:3.5rem;
+
+    }
+
+    .szns-grid{
+      grid-template-columns: repeat(8,1fr);
+
+    }
+  }
+}
+
+@media screen and (min-width:1560px){
+  .movieCont{
+    grid-template-columns: repeat(5,1fr);
+
+      width:100%;
+      gap:0.8rem;
+      
+      .movieCard{
+        margin:0;
+        // margin-right:0.2rem;
+        // padding:0.3rem;
+        img{
+          width:16rem;
+        }
+      }
+  }
+  .moviesFrame{
+    iframe{
+      width:1350px;
+      height:720px;
+    }
+  }
+  .watch-series-cont{
+    h2{
+      font-size: 3rem;
+    }
+
+    iframe{
+      width:1350px;
+      height:720px;
+
+    }
+  }
+  .full-eps-cont{
+
+    h1{
+      font-size:3.7rem;
+    }
+    .episode-cont{
+      grid-template-columns: repeat(8,1fr);
+    }
+  }
+
+  .num-of-series-cont{
+    h1{
+      font-size:3.7rem;
+
+    }
+
+    .szns-grid{
+      grid-template-columns: repeat(8,1fr);
+
+    }
+  }
+}
+
+@media screen and (min-width:1700px){
+  .movieCont{
+    grid-template-columns: repeat(6,1fr);
+
+      width:100%;
+      gap:0.8rem;
+      
+      .movieCard{
+        margin:0;
+        // margin-right:0.2rem;
+        // padding:0.3rem;
+        img{
+          width:17rem;
+        }
+      }
+  }
+  .moviesFrame{
+    iframe{
+      width:1500px;
+      height:760px;
+    }
+  }
+  .watch-series-cont{
+    h2{
+      font-size: 3rem;
+    }
+
+    iframe{
+      width:1500px;
+      height:760px;
+
+    }
+  }
+  .full-eps-cont{
+    h1{
+      font-size:3.8rem;
+    }
+
+    .episode-cont{
+      grid-template-columns: repeat(9,1fr);
+    }
+  }
+
+  .num-of-series-cont{
+
+    h1{
+      font-size:3.8rem;
+
+    }
+
+    .szns-grid{
+      grid-template-columns: repeat(9,1fr);
+
+    }
+  }
+}

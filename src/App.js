@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import { Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Nav from "./Nav";
+import Movie from "./components/Movie";
+import Series from "./Series";
+import SznNum from "./components/SznNum";
+import WatchSeries from "./WatchSeries";
+import PageNotFound from "./components/PageNotFound";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Nav />} />
+        <Route path="/movies/:movieId" element={<Movie />} />
+        <Route path="/series/:seriesId" element={<Series />} />
+        <Route
+          path="/series/:seriesId/:seasonNum/:totEpisodeNum"
+          element={<SznNum />}
+        />
+        <Route
+          path="/series/:seriesId/:seasonNum/:episodeNum/watch-series"
+          element={<WatchSeries />}
+        />
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }
